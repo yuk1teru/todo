@@ -7,7 +7,7 @@ const todoSlice = createSlice({
    reducers: {
       //  Add TODO
       addTodo: (state, action) => {
-         state.todoList.push({ id: shortid.generate(), name: action.payload, complite: false });
+         state.todoList.push({ id: shortid.generate(), name: action.payload, completed: false });
       },
       // Todo Action Box
       removeTodo: (state, action) => {
@@ -22,10 +22,10 @@ const todoSlice = createSlice({
             }
          });
       },
-      compliteTodo: (state, action) => {
+      completedTodo: (state, action) => {
          state.todoList.forEach(todo => {
             if (todo.id === action.payload) {
-               todo.complite = true;
+               todo.completed = true;
             }
          });
       },
@@ -41,5 +41,5 @@ const todoSlice = createSlice({
    },
 });
 
-export const { addTodo, removeTodo, compliteTodo, visibleModal, editTodo, filterBoxValue } = todoSlice.actions;
+export const { addTodo, removeTodo, completedTodo, visibleModal, editTodo, filterBoxValue } = todoSlice.actions;
 export default todoSlice.reducer;

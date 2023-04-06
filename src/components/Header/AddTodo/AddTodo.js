@@ -9,11 +9,11 @@ export default function AddTodo() {
 
    const handleClick = e => {
       e.preventDefault();
-      console.log(todoText.length);
       if (todoText.length > 0 && todoText.length < 255) {
          dispatch(addTodo(todoText));
          setTodoText('');
       } else {
+         alert(`to-do name must be greater than 0 characters and less than 255 characters, you entered ${todoText.length} characters`);
       }
    };
    const handleChange = e => {

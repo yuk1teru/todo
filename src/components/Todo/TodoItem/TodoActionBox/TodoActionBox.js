@@ -1,25 +1,25 @@
 import s from './TodoActionBox.module.scss';
-import { CompliteSvg, DeleteSvg, EditSvg } from './../../../../images';
+import { CompletedSvg, DeleteSvg, EditSvg } from './../../../../images';
 import { useDispatch } from 'react-redux';
-import { removeTodo, compliteTodo, visibleModal } from '../../../../redux/todoList/todoList-reducers';
+import { removeTodo, completedTodo, visibleModal } from '../../../../redux/todoList/todoList-reducers';
 
-export default function TodoActionBox({ id, complite }) {
+export default function TodoActionBox({ id, completed }) {
    const dispatch = useDispatch();
 
    const handleRemove = () => {
       dispatch(removeTodo(id));
    };
-   const handleComplite = () => {
-      dispatch(compliteTodo(id));
+   const handleCompleted = () => {
+      dispatch(completedTodo(id));
    };
    const handleEdit = () => {
       dispatch(visibleModal(id));
    };
    return (
       <>
-         {complite ? (
-            <div className={s.todoActionBox__compliteWrap}>
-               <p className={s.todoActionBox__message}>Complited!</p>
+         {completed ? (
+            <div className={s.todoActionBox__completedWrap}>
+               <p className={s.todoActionBox__message}>Completed!</p>
                <button className={s.todoActionBox__btn} type="button" title="Remove" aria-label="to-do remove button" onClick={handleRemove}>
                   <DeleteSvg />
                </button>
@@ -27,8 +27,8 @@ export default function TodoActionBox({ id, complite }) {
          ) : (
             <ul className={s.todoActionBox}>
                <li>
-                  <button className={s.todoActionBox__btn} type="button" title="Complite" aria-label="to-do completed button" onClick={handleComplite}>
-                     <CompliteSvg />
+                  <button className={s.todoActionBox__btn} type="button" title="Completed" aria-label="to-do completed button" onClick={handleCompleted}>
+                     <CompletedSvg />
                   </button>
                </li>
                <li>

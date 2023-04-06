@@ -25,9 +25,9 @@ export default function FilterBox() {
             </label>
          </li>
          <li className={s.filterBox__item}>
-            <input className={s.filterBox__input} type="radio" name="filterBox" value="Complite" id="filterBoxComplited" onChange={onChecked} checked={radioValue === 'Complited'} />
-            <label className={s.filterBox__btn} htmlFor="filterBoxComplited">
-               Complited
+            <input className={s.filterBox__input} type="radio" name="filterBox" value="Completed" id="filterBoxCompleted" onChange={onChecked} checked={radioValue === 'Completed'} />
+            <label className={s.filterBox__btn} htmlFor="filterBoxCompleted">
+               Completed
             </label>
          </li>
       </ul>

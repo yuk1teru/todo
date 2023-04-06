@@ -9,11 +9,11 @@ export default function Todo({ todoList }) {
       switch (filterValue) {
          case 'Active':
             return todoList.filter(todo => {
-               return todo.complite === false;
+               return todo.completed === false;
             });
 
-         case 'Complite':
-            return todoList.filter(todo => todo.complite === true);
+         case 'Completed':
+            return todoList.filter(todo => todo.completed === true);
 
          default:
             return todoList;
@@ -25,7 +25,7 @@ export default function Todo({ todoList }) {
    return (
       <ul className={s.todo}>
          {filteredTodoList.map(todo => (
-            <TodoItem key={todo.id} name={todo.name} id={todo.id} complite={todo.complite} />
+            <TodoItem key={todo.id} name={todo.name} id={todo.id} completed={todo.completed} />
          ))}
       </ul>
    );
