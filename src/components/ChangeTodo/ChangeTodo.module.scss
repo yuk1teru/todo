@@ -1,0 +1,33 @@
+@import './../../scss/_placeholders';
+.changeTodo {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: 100%;
+   &__label {
+      font-size: 24px;
+      color: var(--secondary-color);
+   }
+   &__textarea {
+      font-size: 18px;
+      padding: 10px;
+      width: 100%;
+      flex-grow: 1;
+      border: none;
+      border-radius: 8px;
+      resize: none;
+      border: 1px solid var(--secondary-color);
+      &:focus {
+         outline: 2px solid var(--secondary-color);
+      }
+   }
+
+   &__btn {
+      @extend %btn;
+      width: 100%;
+
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 8px;
+   }
+}

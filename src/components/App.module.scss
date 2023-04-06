@@ -1,0 +1,25 @@
+.app {
+   margin: 0;
+   width: 100%;
+   min-height: 100vh;
+
+   background-color: #dbebda;
+   overflow-x: hidden;
+}
+.app.empty {
+   background-image: url('./../images/background.svg');
+   background-repeat: no-repeat;
+   background-position: 50% 65%;
+   background-size: 65vh;
+}
+
+.notEmpty__container {
+   display: flex;
+   flex-direction: column;
+}
+
+.todos__wrap {
+   max-width: 500px;
+   width: 100%;
+   margin: 0 auto;
+}

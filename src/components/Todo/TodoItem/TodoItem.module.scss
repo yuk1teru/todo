@@ -1,0 +1,35 @@
+.todo {
+   &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: calc((100% - 40px) / 3);
+      width: 100%;
+      min-width: 150px;
+      min-height: 115px;
+      padding: 5px 10px;
+
+      background-color: #fff;
+      box-shadow: 3px 5px 10px -1px var(--secondary-color);
+      border-radius: 8px;
+
+      @media screen and (max-width: 768px) {
+         max-width: calc((100% - 20px) / 2);
+      }
+      @media screen and (max-width: 550px) {
+         max-width: 100%;
+      }
+
+      &.complited {
+         background-color: #d5ff74;
+      }
+   }
+   &__name {
+      color: #444444;
+      overflow: hidden;
+      text-overflow: -o-ellipsis-lastline;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+   }
+}

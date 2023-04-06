@@ -1,0 +1,20 @@
+.backdrop {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.modal {
+   padding: 30px;
+   width: 80%;
+   height: 80%;
+   background-color: #ffffff;
+
+   box-shadow: 3px 5px 10px -1px var(--secondary-color);
+   border-radius: 8px;
+}

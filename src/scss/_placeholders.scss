@@ -1,0 +1,22 @@
+%btn {
+   color: #fff;
+   background-color: var(--primary-color);
+   border: none;
+
+   transition: background-color var(--transition);
+   cursor: pointer;
+   &:hover {
+      background-color: var(--secondary-color);
+   }
+}
+
+%visibilityHidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}

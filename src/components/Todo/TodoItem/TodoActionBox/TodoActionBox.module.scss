@@ -1,0 +1,48 @@
+.todoActionBox {
+   display: flex;
+   justify-content: end;
+   align-items: center;
+   gap: 12px;
+
+   &__btn {
+      padding: 5px;
+      display: flex;
+      justify-content: end;
+      max-width: 22px;
+      width: 100%;
+      padding: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      color: #aad1a7;
+      transition: color var(--transition);
+      &:hover,
+      &:focus {
+         color: var(--secondary-color);
+      }
+      &[title='Remove'] {
+         &:hover,
+         &:focus {
+            color: var(--secondary-red-color);
+         }
+      }
+      &[title='Edit'] {
+         &:hover,
+         &:focus {
+            color: #dfb94f;
+         }
+      }
+   }
+   &__message {
+      text-align: end;
+      font-size: 20px;
+
+      color: var(--secondary-color);
+   }
+   &__compliteWrap {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 10px;
+   }
+}

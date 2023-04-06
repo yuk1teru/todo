@@ -1,0 +1,14 @@
+.mainTitle {
+   margin: 20px 0;
+
+   font-size: 40px;
+   color: #fff;
+   text-align: center;
+
+   filter: drop-shadow(1px 2px 2px var(--primary-color));
+}
+.wrapper {
+   max-width: 600px;
+   margin: 0 auto;
+   padding-bottom: 10px;
+}
