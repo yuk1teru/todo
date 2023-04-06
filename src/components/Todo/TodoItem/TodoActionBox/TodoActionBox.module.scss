@@ -1,13 +1,13 @@
 .todoActionBox {
    display: flex;
-   justify-content: end;
+   justify-content: flex-end;
    align-items: center;
    gap: 12px;
 
    &__btn {
       padding: 5px;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       max-width: 22px;
       width: 100%;
       padding: 0;
@@ -42,7 +42,7 @@
    &__compliteWrap {
       display: flex;
       align-items: center;
-      justify-content: end;
+      justify-content: flex-end;
       gap: 10px;
    }
 }
